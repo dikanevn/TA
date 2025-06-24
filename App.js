@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>v9</Text>
+      <Text style={styles.text}>v10</Text>
       <StatusBar style="auto" />
     </View>
   );
