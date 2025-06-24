@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "build": "expo export --platform web",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && echo '' > dist/.nojekyll && copy public\\index.html dist\\index.html",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
