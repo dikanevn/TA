@@ -25,11 +25,8 @@
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro",
-      "baseUrl": "/TA/",
-      "meta": {
-        "viewport": "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
-        "telegram-web-app-ready": "true"
-      }
+      "publicPath": "/TA/",
+      "output": "single"
     }
   }
 }

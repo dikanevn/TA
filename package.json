@@ -8,8 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "build": "expo export --platform web",
-    "predeploy": "npm run build && echo '' > dist/.nojekyll && copy public\\index.html dist\\index.html",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "copy .nojekyll dist\\.nojekyll",
+    "deploy": "gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "@expo/metro-runtime": "~5.0.4",

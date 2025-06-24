@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Platform } from 'react-native';
 import { useEffect } from 'react';
 
 export default function App() {
   useEffect(() => {
-    // Инициализация Telegram Web App
-    if (window.Telegram?.WebApp) {
+    // Инициализация Telegram Web App только для веб-платформы
+    if (Platform.OS === 'web' && window.Telegram?.WebApp) {
       window.Telegram.WebApp.ready();
       window.Telegram.WebApp.expand();
     }
@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>v7</Text>
+      <Text style={styles.text}>v9</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -26,4 +26,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  }
 });
